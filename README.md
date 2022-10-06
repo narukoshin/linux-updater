@@ -14,7 +14,7 @@
   To do this, you need to place this script somewhere in the linux server, I recommend you to do it in the /root directory, add root permissions to read and execute:
 </p>
 
-```sh
+```py
 chown root:root updater.sh # set root as the owner
 chmod 500 updater.sh # set read and execute permission
 ```
