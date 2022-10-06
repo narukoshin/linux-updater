@@ -1,8 +1,8 @@
 #!/bin/bash
 
-updates_to_install=$(apt update 2>&1 | egrep -o "[0-9]+ package(s?) can be upgraded." | egrep -o "[0-9]+")
-update_log="/root/updater/logs/$(date +"%d-%m-%Y_%H-%M-update").log"
 main_dir="/root/updater"
+updates_to_install=$(apt update 2>&1 | egrep -o "[0-9]+ package(s?) can be upgraded." | egrep -o "[0-9]+")
+update_log="$main_dir/logs/$(date +"%d-%m-%Y_%H-%M-update").log"
 
 # checking for updates and installing them
 
