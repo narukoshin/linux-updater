@@ -19,7 +19,7 @@ chown root:root updater.sh # set root as the owner
 chmod 500 updater.sh # set read and execute permission
 ```
 ...and set the cronjob to run this script every day:
-```sh
+```java
 # crontab -u root -e
 @daily /root/updater/updater.sh
 ```
