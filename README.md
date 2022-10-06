@@ -13,6 +13,6 @@ chmod 500 updater.sh # set read and execute permission
 ```
 ...and set the cronjob to run this script every day:
 ```sh
-# crontab -e
+# crontab -u root -e
 @daily /root/updater/updater.sh
 ```
