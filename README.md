@@ -24,5 +24,5 @@ chmod 500 updater.sh # set read and execute permission
 @daily /root/updater/updater.sh
 ```
 <p>
-On very first run it creates a `logs` folder in the main directory that you specified in the bash file. In the logs folder will be stored logs of the update, what's installed and all the errors if there is any.
+On very first run it creates a <code>logs</code> folder in the main directory that you specified in the bash file. In the logs folder will be stored logs of the update, what's installed and all the errors if there is any.
 </p>
