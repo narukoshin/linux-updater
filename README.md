@@ -23,3 +23,6 @@ chmod 500 updater.sh # set read and execute permission
 # crontab -u root -e
 @daily /root/updater/updater.sh
 ```
+<p>
+On very first run it created a `logs` folder in the main directory that you specified in the bash file. In the logs folder will be stored logs of the update, what's installed and all the errors if there is any.
+</p>
