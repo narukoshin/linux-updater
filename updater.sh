@@ -12,7 +12,7 @@ fi
 # checking for updates and installing them
 
 if [[ updates_to_install -gt 0 ]]; then
-        echo "[+] There's $updates_to_install packages to update" >> $update_log
+        echo "[+] There are $updates_to_install packages to update" >> $update_log
         echo "$(apt list --upgradeable 2>&1)" >> $update_log
         export DEBIAN_FRONTEND=noninteractive
         apt upgrade -y >> $update_log 2>&1
