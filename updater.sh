@@ -4,6 +4,11 @@ main_dir="/root/updater"
 updates_to_install=$(apt update 2>&1 | egrep -o "[0-9]+ package(s?) can be upgraded." | egrep -o "[0-9]+")
 update_log="$main_dir/logs/$(date +"%d-%m-%Y_%H-%M-update").log"
 
+# checking if the logs folder exists; creates if it doesn't 
+if [[ ! -d "$main_dir/logs" ]]; then
+        mkdir $main_dir/logs
+fi
+
 # checking for updates and installing them
 
 if [[ updates_to_install -gt 0 ]]; then
