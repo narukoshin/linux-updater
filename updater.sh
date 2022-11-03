@@ -27,5 +27,5 @@ if (( $(date +"%-d") == 1 )); then
         prev_month="0$prev_month"
     fi
     archive_name=$(date -d $(date +"%Y-$prev_month-%d") '+%B-%Y').tar.gz
-    tar -zcvf $main_dir/logs/$archive_name $main_dir/logs/*-$prev_month-$(date +"%Y")* --remove-files > /dev/null
+    tar zcvf $main_dir/logs/$archive_name -C $main_dir/logs/ ./*-$prev_month-$(date +"%Y")* --remove-files > /dev/null
 fi
