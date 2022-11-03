@@ -22,7 +22,10 @@ fi
 # creating an archive for previous month
 
 if (( $(date +"%-d") == 1 )); then
-    prev_month=0`expr $(date +"%m") - 1`
+    prev_month=`expr $(date +"%m") - 1`
+    if [[ $prev_month -lt 10 ]]; then
+        prev_month="0$prev_month"
+    fi
     archive_name=$(date -d $(date +"%Y-$prev_month-%d") '+%B-%Y').tar.gz
     tar -zcvf $main_dir/logs/$archive_name $main_dir/logs/*-$prev_month-$(date +"%Y")* --remove-files > /dev/null
 fi
