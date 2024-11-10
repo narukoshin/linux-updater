@@ -28,7 +28,8 @@ if (( $(date +"%-d") == 1 )); then
     fi
     archive_name=$(date -d $(date +"%Y-$prev_month-%d") '+%B-%Y').tar.gz
     # changing the working directory
-    cd $main_dir
+    cd $main_dir/logs
     # archiving the files.
     tar zcvf $archive_name *-$prev_month-$(date +"%Y")* --remove-files > /dev/null
+    
 fi
